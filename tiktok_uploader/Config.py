@@ -14,7 +14,9 @@ class Config:
         "TMP_YOUTUBE_VIDEO_DIR": "",
         "LANG": "en", 
         "TIKTOK_BASE_URL": "https://www.tiktok.com/upload?lang=", 
-        "IMAGEMAGICK_BINARY": ""
+        "IMAGEMAGICK_BINARY": "",
+        "JSON_FILEPATH": "tiktok_uploader/ytscrapper/urls.json",
+        "LOG_DIR": "Logging/app.log"
     }
 
     _EXCLUDE = ["#"]
@@ -79,6 +81,16 @@ class Config:
     def videos_dir(self):
         """Directory where videos are stored"""
         return self.get_option_by_name("VIDEOS_DIR")
+    
+    @property
+    def json_filepath(self):
+        """Directory where videos are stored"""
+        return self.get_option_by_name("JSON_FILEPATH")
+    
+    @property
+    def log_dir(self):
+        """Directory where videos are stored"""
+        return self.get_option_by_name("LOG_DIR")
     
     @property
     def post_processing_video_path(self):

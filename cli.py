@@ -1,7 +1,8 @@
 import argparse
 from tiktok_uploader import tiktok, Video
-from tiktok_uploader.basics import eprint
+from tiktok_uploader.basics import eprint 
 from tiktok_uploader.Config import Config
+from tiktok_uploader.ytscrapper.video_scrapper import yt_urls_to_json
 import sys, os
 
 if __name__ == "__main__":
@@ -13,6 +14,7 @@ if __name__ == "__main__":
     # Login subcommand.
     login_parser = subparsers.add_parser("login", help="Login into TikTok to extract the session id (stored locally)")
     login_parser.add_argument("-n", "--name", help="Name to save cookie as", required=True)
+    login_parser.add_argument("-yt", "--youtube", help="Youtube channel link with /videos", required=True)
 
     # Upload subcommand.
     upload_parser = subparsers.add_parser("upload", help="Upload video on TikTok")
@@ -41,10 +43,16 @@ if __name__ == "__main__":
     if args.subcommand == "login":
         if not hasattr(args, 'name') or args.name is None:
             parser.error("The 'name' argument is required for the 'login' subcommand.")
+        if not hasattr(args, 'youtube') or args.youtube is None:
+            parser.error("The 'youtube' argument is required for the 'login' subcommand.")
         # Name of file to save the session id.
         login_name = args.name
         # Name of file to save the session id.
         tiktok.login(login_name)
+        # yt channel link with /videos
+        yt_link = args.youtube
+        # automaticaly starting parser
+        yt_urls_to_json(yt_link, args.name)
 
     elif args.subcommand == "upload":
         # Obtain session id from the cookie name.

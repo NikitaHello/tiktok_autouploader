@@ -15,6 +15,7 @@ idna==3.6
 imageio==2.33.1
 imageio-ffmpeg==0.4.9
 importlib-metadata==7.0.1
+importlib_resources==6.4.0
 lxml==5.1.0
 moviepy==1.0.3
 nose2==0.14.1
@@ -29,7 +30,7 @@ pyppeteer==1.0.2
 pyquery==2.0.0
 PySocks==1.7.1
 python-dotenv==1.0.1
-pytube @ git+https://github.com/pytube/pytube@a32fff39058a6f7e5e59ecd06a7467b71197ce35
+pytube==15.0.0
 requests==2.31.0
 requests-auth-aws-sigv4==0.7
 requests-html==0.10.0
@@ -41,8 +42,10 @@ tqdm==4.66.2
 trio==0.24.0
 trio-websocket==0.11.1
 typing_extensions==4.9.0
-undetected-chromedriver @ git+https://github.com/ultrafunkamsterdam/undetected-chromedriver.git
-urllib3
-websockets
+undetected-chromedriver==3.5.5
+urllib3==1.26.18
+w3lib==2.1.2
+websockets==10.4
 wsproto==1.2.0
+youtube-dl==2021.12.17
 zipp==3.17.0
