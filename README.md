@@ -7,9 +7,11 @@ Please follow instructions in the provided URL,
 
 Please make sure `node` is in your environment path before running, as it is required in the upload stage. 
 
-Make sure you also have the Python 3.9 and higher virsion from url:
+Make sure you have the Python 3.9 and higher virsion from url:
 
 `https://python.org`
+
+Also you will need Google Chrome browser installed.
 
 --------------------------------------
 ### Installation
@@ -71,6 +73,13 @@ Stop the task if it runs longer than: 4 hours;
 If the task does not end when requested, force it to stop;
 
 8. Finish: Review your settings and click "OK" to create the task. You may be asked to enter your user password for Windows.
+
+------------
+### Adding new user
+
+Find Login.bat file in repository and start it manually. You will be asked to enter username (recommended to use tik-tok username) and  the youtube link to connected channel with .../videos adding.
+
+If everything completes successfuly, browser Google Chrome will be opened. Than you have to log in to your tik-tok accaunt to create the cookies file, which can be found in CookiesDir in your project repository. Browser will be closed after logging in.
 
 ### Logs
 
