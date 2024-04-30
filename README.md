@@ -79,7 +79,7 @@ If the task does not end when requested, force it to stop;
 
 Find Login.bat file in repository and start it manually. You will be asked to enter username (recommended to use tik-tok username) and  the youtube link to connected channel with .../videos adding.
 
-If everything completes successfuly, browser Google Chrome will be opened. Than you have to log in to your tik-tok accaunt to create the cookies file, which can be found in CookiesDir in your project repository. Browser will be closed after logging in.
+If everything completes successfully, browser Google Chrome will be opened. Than you have to log in to your tik-tok account to create the cookies file, which can be found in CookiesDir in your project repository. Browser will be closed after logging in.
 
 ### Logs
 

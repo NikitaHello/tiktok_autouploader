@@ -161,6 +161,8 @@ def json_videos_update(user_name: str):
     filename = Config.get().json_filepath
     video_data = json_parser(user_name)
     json_data = get_json_data()
+    if json_data == []:
+        logger.error("You've deleted json data. Login your user another time")
     yt_data = get_video_urls(video_data['channel_url'], user_name)
     if json_data and yt_data:
         json_vid_delete(json_data, yt_data)
@@ -184,6 +186,6 @@ if __name__ == "__main__":
     yt_link = input("Insert channel url with /videos: ")
     user = input("Insert user name: ")
     yt_urls_to_json(yt_link, user)
-    unpaked = json_parser(user)
-    print(unpaked)
+ #   unpaked = json_parser(user)
+ #   print(unpaked)
 """
