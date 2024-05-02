@@ -38,11 +38,20 @@ Install node packages.
 cd tiktok_uploader/tiktok-signature/
 npm i
 ```
+------------
+
+### Adding new user
+
+Find **Login.bat** file in repository and start it manually. You will be asked to enter username (recommended to use tik-tok username) and  the youtube link to connected channel with **.../videos** adding.
+
+If everything completes successfully, browser Google Chrome will be opened. Than you have to log in to your tik-tok account to create the cookies file, which can be found in **CookiesDir** in your project repository. Browser will be closed after logging in.
 
 ------------
+
 ### Automation guide:
 
-Installation instructions for Windows Task Scheduler for automation. If you are using UNIX systems, you need to set up Cron.
+Before automation you need to manualy launch first video uploade to your tik-tok channel. This have to be done as a workaround to problem with downloading age-restricted videos from youtube. 
+Find **...\TiktokAutoUploader\upload_start.bat** file in project repository and launch it. Next follow the messages in cli, log in your youtube accaunt to create cookie cache, so you won't need to do this next time.
 
 To access Windows Task Scheduler, use the Win+R key combination and enter taskschd.msc. Alternatively, search for it through the standard Windows search.
 
@@ -59,8 +68,8 @@ In Security options section choose "Run whether user logged on or not", "Run wit
 
 5. Action: Select "Start a program".
 Settings.
-Find "upload_start.bat" file in your repository. Copy the path with the file name attached and insert into Program/Script section. Like this: ...\TiktokAutoUploader\upload_start.bat
-Copy the path without file name and insert into "Start in" section. This is a mandatory field for our settings. Like this: ...\TiktokAutoUploader
+Find "upload_start.bat" file in your repository. Copy the path with the file name attached and insert into Program/Script section. Like this: **...\TiktokAutoUploader\upload_start.bat**
+Copy the path without file name and insert into "Start in" section. This is a mandatory field for our settings. Like this: **...\TiktokAutoUploader**
 
 6. Set Conditions: Unset all checkboxes.
    
@@ -75,15 +84,10 @@ If the task does not end when requested, force it to stop;
 8. Finish: Review your settings and click "OK" to create the task. You may be asked to enter your user password for Windows.
 
 ------------
-### Adding new user
-
-Find Login.bat file in repository and start it manually. You will be asked to enter username (recommended to use tik-tok username) and  the youtube link to connected channel with .../videos adding.
-
-If everything completes successfully, browser Google Chrome will be opened. Than you have to log in to your tik-tok account to create the cookies file, which can be found in CookiesDir in your project repository. Browser will be closed after logging in.
 
 ### Logs
 
-Logs are being stocked in file ./Logging/app.log inside the project repository. As for now it is being written into one file, which clears before script starts. 
+Logs are being stocked in file **./Logging/app.log** inside the project repository. As for now it is being written into one file, which clears before script starts. 
 
 ### Using program in CLI:
 
