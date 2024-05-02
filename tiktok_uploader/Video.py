@@ -58,7 +58,7 @@ class Video:
 
     def get_youtube_video(self, max_res=True):
         url = self.source_ref
-        streams = YouTube(url).streams.filter(progressive=True)
+        streams = YouTube(url, use_oauth=True, allow_oauth_cache=True).streams.filter(progressive=True)
         valid_streams = sorted(streams, reverse=True, key=lambda x: x.resolution is not None)
         filtered_streams = sorted(valid_streams, reverse=True, key=lambda x: int(x.resolution.split("p")[0]))
         if filtered_streams:

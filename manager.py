@@ -59,6 +59,7 @@ if __name__ == "__main__":
             result = video_upload(link, title, user)
         except TypeError:
             logger.error("JS error while uploading")
+            reupload_list.append({'link': link, 'title': title, 'user': user})
         if result:
             logger.info(f"Video '{title}' has been successfuly uploaded")
         else:
