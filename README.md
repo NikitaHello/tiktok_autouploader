@@ -16,21 +16,28 @@ Also you will need Google Chrome browser installed.
 --------------------------------------
 ### Installation
 
-Clone the repository or donwload as a .zip archive directly from repository page.
+Donwload repository as a .zip archive directly from repository page
 
-For cloning this rep you must have Git installed and set up. If you are using Windows check https://git-scm.com/download/win and download latest virsion.
+OR
+
+Clone the repository from github.
+
+For cloning this rep you must have Git installed and set up. 
+If you are using Windows check https://git-scm.com/download/ and download latest virsion.
 
 ```bash
 git clone https://github.com/makiisthenes/TiktokAutoUploader.git
 ```
 
-Find Instalation.bat file in repository and launch it.
 
-OR use cli commands below.
+Find **Instalation.bat** (for Windows) / **Instalation.sh** (for Unix/Mac OS) file in repository and launch it.
+
+OR use cli (Terminal) commands below.
 
 Install requirements for package.
 
 ```bash
+pip upgrade
 pip install -r requirements.txt
 ```
 Install node packages.
@@ -42,7 +49,7 @@ npm i
 
 ### Adding new user
 
-Find **Login.bat** file in repository and start it manually. You will be asked to enter username (recommended to use tik-tok username) and  the youtube link to connected channel with **.../videos** adding.
+Find **user_login.bat** (for Windows) / **user_login.sh** (for Unix/Mac OS) file in repository and start it manually. You will be asked to enter username (recommended to use tik-tok username) and  the youtube link to connected channel with **.../videos** adding.
 
 example: `https://www.youtube.com/@spud17soccer/videos`
 
@@ -92,6 +99,30 @@ If the task does not end when requested, force it to stop;
 
 <details>
   <summary>Unix / Mac OS</summary>
+  Before automation you need to manualy launch first video uploade to your tik-tok channel. This have to be done as a workaround to problem with downloading age-restricted videos from youtube. 
+Find **...\TiktokAutoUploader\upload_start.sh** file in project repository and launch it. Next follow the messages in cli, log in your youtube accaunt to create cookie cache, so you won't need to do this next time.
+
+Crontab will be used for automation. 
+
+1. To open crontab file use command:
+
+```bash
+nano crontab -e
+```
+
+2. Find `upload_start.sh` in project repository and copy its path. In the crontab file enter the following command.
+
+```bash
+0 1 * * * .../TiktokAutoUploader/upload_start.sh
+```
+Paste the path to the upload_start.sh instead of ".../".
+
+This will run the scrape at minute = 0 , hour = 1, day = * : every day, month=: * every month, weekday= * every weekday.
+Using the website `https://crontab.guru/`, it’s easy to create any schedule you can wish for.
+
+3. Save the crontab file.
+Keyword combination CTRL+O will save the file and you can exit using CTRL+X.
+Great work, now your script should be running on schedule.
   
 </details>
 
