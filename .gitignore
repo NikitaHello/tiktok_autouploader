@@ -145,3 +145,4 @@ tests/*
 .idea/*
 
 tiktok_uploader\tiktok-signature\command.txt
+tiktok_uploader/ytscrapper/urls.json

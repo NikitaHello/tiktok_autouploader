@@ -44,13 +44,18 @@ npm i
 
 Find **Login.bat** file in repository and start it manually. You will be asked to enter username (recommended to use tik-tok username) and  the youtube link to connected channel with **.../videos** adding.
 
-If everything completes successfully, browser Google Chrome will be opened. Than you have to log in to your tik-tok account to create the cookies file, which can be found in **CookiesDir** in your project repository. Browser will be closed after logging in.
+example: `https://www.youtube.com/@spud17soccer/videos`
+
+If everything completes successfully, browser Google Chrome will be opened. Than you have to log in to your tik-tok account to create the cookies file, which can be found in **CookiesDir** in your project repository. Browser will be automatically closed after logging in.
 
 ------------
 
 ### Automation guide:
 
-Before automation you need to manualy launch first video uploade to your tik-tok channel. This have to be done as a workaround to problem with downloading age-restricted videos from youtube. 
+<details>
+  <summary>Windows</summary>
+  
+  Before automation you need to manualy launch first video uploade to your tik-tok channel. This have to be done as a workaround to problem with downloading age-restricted videos from youtube. 
 Find **...\TiktokAutoUploader\upload_start.bat** file in project repository and launch it. Next follow the messages in cli, log in your youtube accaunt to create cookie cache, so you won't need to do this next time.
 
 To access Windows Task Scheduler, use the Win+R key combination and enter taskschd.msc. Alternatively, search for it through the standard Windows search.
@@ -82,6 +87,15 @@ Stop the task if it runs longer than: 4 hours;
 If the task does not end when requested, force it to stop;
 
 8. Finish: Review your settings and click "OK" to create the task. You may be asked to enter your user password for Windows.
+
+</details>
+
+<details>
+  <summary>Unix / Mac OS</summary>
+  
+</details>
+
+
 
 ------------
 
