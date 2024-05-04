@@ -16,7 +16,7 @@ Also you will need Google Chrome browser installed.
 --------------------------------------
 ### Installation
 
-Donwload repository as a .zip archive directly from repository page
+Donwload repository as a .zip archive directly from this github repository page.
 
 OR
 
@@ -28,9 +28,9 @@ If you are using Windows check https://git-scm.com/download/ and download latest
 ```bash
 git clone https://github.com/makiisthenes/TiktokAutoUploader.git
 ```
+------------
 
-
-Find **Instalation.bat** (for Windows) / **Instalation.sh** (for Unix/Mac OS) file in repository and launch it.
+Find **Installation.bat** (for Windows) / **Installation.sh** (for Unix/Mac OS) file in repository and launch it.
 
 OR use cli (Terminal) commands below.
 
@@ -63,7 +63,7 @@ If everything completes successfully, browser Google Chrome will be opened. Than
   <summary>Windows</summary>
   
   Before automation you need to manualy launch first video uploade to your tik-tok channel. This have to be done as a workaround to problem with downloading age-restricted videos from youtube. 
-Find **...\TiktokAutoUploader\upload_start.bat** file in project repository and launch it. Next follow the messages in cli, log in your youtube accaunt to create cookie cache, so you won't need to do this next time.
+Find **...\TiktokAutoUploader\upload_start.bat** file in project repository and launch it. Next follow the messages in cli, log in your youtube account to create cookie cache, so you won't need to do this next time.
 
 To access Windows Task Scheduler, use the Win+R key combination and enter taskschd.msc. Alternatively, search for it through the standard Windows search.
 
@@ -100,7 +100,7 @@ If the task does not end when requested, force it to stop;
 <details>
   <summary>Unix / Mac OS</summary>
   Before automation you need to manualy launch first video uploade to your tik-tok channel. This have to be done as a workaround to problem with downloading age-restricted videos from youtube. 
-Find **...\TiktokAutoUploader\upload_start.sh** file in project repository and launch it. Next follow the messages in cli, log in your youtube accaunt to create cookie cache, so you won't need to do this next time.
+Find **...\TiktokAutoUploader\upload_start.sh** file in your project repository and launch it. Next follow the messages in cli, log in your youtube account to create cookie cache, so you won't need to do this next time.
 
 Crontab will be used for automation. 
 
