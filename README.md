@@ -114,6 +114,7 @@ If the task does not end when requested, force it to stop;
 <details>
   <summary>Unix / Mac OS</summary>
   Before automation you need to manualy launch first video uploade to your tik-tok channel. This have to be done as a workaround to problem with downloading age-restricted videos from youtube. 
+  
 Find **...\TiktokAutoUploader\upload_start.sh** file in your project repository and execute it. For executing write commands below in Termianl:
 ```bash
 cd your_filepath
