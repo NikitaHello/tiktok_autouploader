@@ -30,7 +30,13 @@ git clone https://github.com/makiisthenes/TiktokAutoUploader.git
 ```
 ------------
 
-Find **Installation.bat** (for Windows) / **Installation.sh** (for Unix/Mac OS) file in repository and launch it.
+For Windows: find **Installation.bat** file in repository and launch it.
+
+For Unix/Mac OS: find **Installation.sh** file in repository. Copy the filepath. In Terminal write commands below to execute script:
+```bash
+cd your_filepath
+bash Installation.sh
+```
 
 OR use cli (Terminal) commands below.
 
@@ -49,7 +55,15 @@ npm i
 
 ### Adding new user
 
-Find **user_login.bat** (for Windows) / **user_login.sh** (for Unix/Mac OS) file in repository and start it manually. You will be asked to enter username (recommended to use tik-tok username) and  the youtube link to connected channel with **.../videos** adding.
+For Windows: find **user_login.bat** file in repository and start it manually. 
+
+For Unix/Mac OS: find **user_login.sh** file in repository. Copy the filepath. In Terminal write commands below to execute script:
+```bash
+cd your_filepath
+bash user_login.sh
+```
+
+You will be asked to enter username (recommended to use tik-tok username) and  the youtube link to connected channel with **.../videos** adding.
 
 example: `https://www.youtube.com/@spud17soccer/videos`
 
@@ -100,11 +114,17 @@ If the task does not end when requested, force it to stop;
 <details>
   <summary>Unix / Mac OS</summary>
   Before automation you need to manualy launch first video uploade to your tik-tok channel. This have to be done as a workaround to problem with downloading age-restricted videos from youtube. 
-Find **...\TiktokAutoUploader\upload_start.sh** file in your project repository and launch it. Next follow the messages in cli, log in your youtube account to create cookie cache, so you won't need to do this next time.
+Find **...\TiktokAutoUploader\upload_start.sh** file in your project repository and execute it. For executing write commands below in Termianl:
+```bash
+cd your_filepath
+bash upload_start.sh
+``` 
+Next follow the messages in Terminal, log in your youtube account to create cookie cache, so you won't need to do this next time.
+
 
 Crontab will be used for automation. 
 
-1. To open crontab file use command:
+1. To open crontab file use command in Terminal:
 
 ```bash
 nano crontab -e
